@@ -1,0 +1,40 @@
+{
+  "name": "@veyralabs/naming-suite",
+  "version": "0.1.0",
+  "description": "naming-suite — Brand & naming intelligence skills for Claude Code. Domain generation, brand auditing, competitor mapping, naming guides.",
+  "files": [
+    "domainforge/",
+    "brandaudit/",
+    "competitornames/",
+    "namingguide/"
+  ],
+  "keywords": [
+    "claude-code",
+    "claude-skill",
+    "agent-skill",
+    "naming",
+    "domain-generator",
+    "startup-branding",
+    "brand-strategy",
+    "brand-audit",
+    "competitor-analysis",
+    "naming-guide",
+    "developer-tools",
+    "ai-agents",
+    "anthropic",
+    "claude"
+  ],
+  "author": "VeyraLabs <hello@veyralabs.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veyralabsgroup/naming-suite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/veyralabsgroup/naming-suite/issues"
+  },
+  "homepage": "https://github.com/veyralabsgroup/naming-suite#readme",
+  "engines": {
+    "node": ">=18"
+  }
+}
