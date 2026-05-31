@@ -1,6 +1,6 @@
-# naming-suite — Brand & Naming Intelligence for Claude Code
+# naming-suite
 
-Four skills that work together to name products, audit brands, map competitors, and build naming systems.
+Four skills for naming products, auditing brands, mapping competitors, and building naming systems. Works with Claude Code and other AI coding agents.
 
 ```bash
 npx @veyralabs/skills install naming-suite
@@ -10,108 +10,101 @@ npx @veyralabs/skills install naming-suite
 
 ## Skills
 
-| Skill | What it does |
-|-------|-------------|
-| [`domainforge`](./domainforge/SKILL.md) | Generate and score startup names. Domain availability, social handles, trademark check, brand narrative |
-| [`brandaudit`](./brandaudit/SKILL.md) | Audit an existing brand name across 8 dimensions. Severity scoring, rebrand verdict |
-| [`competitornames`](./competitornames/SKILL.md) | Map the naming landscape in your market. Saturation levels, whitespace, naming brief for DomainForge |
-| [`namingguide`](./namingguide/SKILL.md) | Generate a complete naming guide for a company or product line. Principles, system, dos/don'ts, approval checklist |
+### domainforge
+
+Generates startup name candidates and scores each one across 8 factors: memorability, distinctiveness, domain availability, trademark risk, pronunciation, spelling, brandability, and market fit. Returns a ranked list with domain availability, social handle checks, and a one-line brand narrative for each name.
+
+### brandaudit
+
+Audits an existing brand name. Analyzes it across 8 dimensions, assigns severity scores to each issue, and returns a verdict: keep, refine, or rebrand. Useful before launching a product or after a pivot.
+
+### competitornames
+
+Maps how competitors in a given market are named. Identifies naming clusters (what patterns dominate), saturation levels, and open whitespace. Produces a brief you can feed directly into domainforge.
+
+### namingguide
+
+Builds a complete naming system for a company or product line. Covers naming principles, approved patterns, anti-patterns, examples, and an approval checklist. Useful when a company is scaling and needs consistent naming across features, products, and teams.
 
 ---
 
 ## Recommended flow
 
 ```
-competitornames → domainforge
-brandaudit      → namingguide
+competitornames  →  domainforge    (find a name)
+brandaudit       →  namingguide    (fix and systematize an existing name)
 ```
 
-Run `competitornames` first to map the competitive landscape, then `domainforge` to generate names that stand out from it.
-Run `brandaudit` on an existing name, `namingguide` to lock in what works.
+Run `competitornames` first to understand what names already exist in your space. Then `domainforge` generates names that stand out from that landscape rather than blending in.
+
+---
+
+## Install
+
+```bash
+# Install the full pack
+npx @veyralabs/skills install naming-suite
+
+# Install a single skill
+npx @veyralabs/skills install domainforge
+```
+
+### Manual
+
+Copy the skill folder into your agent's skills directory:
+
+| Agent | Path |
+|-------|------|
+| Claude Code | `.claude/skills/` |
+| Cursor | `.cursor/skills/` |
+| Windsurf | `.windsurf/skills/` |
+| Gemini CLI | `.gemini/skills/` |
 
 ---
 
 ## Usage
 
-Once installed, activate in any Claude Code session — skills trigger contextually.
+Once installed, skills activate when you describe what you need. No commands, no configuration.
 
-**DomainForge:**
 ```
-Find a domain for my new SaaS
-Name my CLI tool for environment variables
-What should I call this project?
-```
-
-**BrandAudit:**
-```
-Audit the brand name "Acme" for a B2B SaaS
-Is our brand name working?
-```
-
-**CompetitorNames:**
-```
-Map the naming landscape for developer config tools
-Who are my competitors and how are they named?
-```
-
-**NamingGuide:**
-```
-Create a naming guide for our company
-We're building a product line and need naming conventions
-Our feature naming is inconsistent — generate a guide
+Find a name for my new developer tool
+I need to name a B2B SaaS for supply chain teams
+Audit our brand name "Acme" — we sell to enterprise HR
+Map how companies in the CRM space are named
+Create a naming guide for our product line
 ```
 
 ---
 
-## Example Output — DomainForge
+## Example output — domainforge
 
 ```
-DomainForge Analysis — Developer Config Management
+DomainForge — Developer Config Management
 
 Archetype: DevTool / Infrastructure
-Mode: Indie Hacker
 
-Top Recommendations
+1. krev.dev  93/100
+   Hard consonant, 4 characters, terminal-native feel.
+   No overlap with Vault or dotenv naming cluster.
+   Domain: krev.dev — available (~$12/yr)
+   Social: @krev — available on X and GitHub
+   Trademark: clean
 
-1. krev.dev — 93/100
-   Hard consonant, 4 chars, terminal-native in lowercase.
-   Zero overlap with Vault/dotenv cluster. Premium DevTool energy.
-   Domain: krev.dev — available (~$12/yr Porkbun)
-   Social: @krev — available on X, GitHub
-   Trademark: Clean
-
-2. onyx.sh — 89/100
-   Single hard word, immediate memorability, shell-adjacent TLD.
+2. onyx.sh  89/100
+   Single hard word, strong memorability, shell-adjacent TLD.
    Domain: onyx.sh — available (~$18/yr)
    Social: @onyxdev — available
-   Trademark: Check in software category
-```
-
----
-
-## Installation
-
-```bash
-# Via veyraskills CLI
-npx @veyralabs/skills install naming-suite
-
-# Install individual skill
-npx @veyralabs/skills install domainforge
-
-# Or copy manually to your agent's skills directory
-# Claude Code: .claude/skills/
-# Cursor:      .cursor/skills/
-# Windsurf:    .windsurf/skills/
+   Trademark: check in software category
 ```
 
 ---
 
 ## Part of VeyraSkills
 
-This pack is part of the [VeyraSkills](https://github.com/veyralabsgroup/veyraskills) collection — a curated set of Claude Code skills for founders, developers, and AI builders.
+This pack is part of [VeyraSkills](https://github.com/veyralabsgroup/veyraskills), a collection of Claude Code skills for founders, developers, and builders.
 
 ---
 
 ## License
 
-MIT — Built by [VeyraLabs](https://veyralabs.com)
+MIT. Built by [VeyraLabs](https://veyralabs.com).
