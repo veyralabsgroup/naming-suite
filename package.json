@@ -1,6 +1,6 @@
 {
   "name": "@veyralabs/naming-suite",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "naming-suite — Brand & naming intelligence skills for Claude Code. Domain generation, brand auditing, competitor mapping, naming guides.",
   "files": [
     "domainforge/",
