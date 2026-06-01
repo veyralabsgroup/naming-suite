@@ -69,31 +69,31 @@ Once installed, skills activate when you describe what you need. No commands, no
 ```
 Find a name for my new developer tool
 I need to name a B2B SaaS for supply chain teams
-Audit our brand name "Acme" — we sell to enterprise HR
+Audit our brand name "Acme" - we sell to enterprise HR
 Map how companies in the CRM space are named
 Create a naming guide for our product line
 ```
 
 ---
 
-## Example output — domainforge
+## Example output - domainforge
 
 ```
-DomainForge — Developer Config Management
+DomainForge - Developer Config Management
 
 Archetype: DevTool / Infrastructure
 
 1. krev.dev  93/100
    Hard consonant, 4 characters, terminal-native feel.
    No overlap with Vault or dotenv naming cluster.
-   Domain: krev.dev — available (~$12/yr)
-   Social: @krev — available on X and GitHub
+   Domain: krev.dev - available (~$12/yr)
+   Social: @krev - available on X and GitHub
    Trademark: clean
 
 2. onyx.sh  89/100
    Single hard word, strong memorability, shell-adjacent TLD.
-   Domain: onyx.sh — available (~$18/yr)
-   Social: @onyxdev — available
+   Domain: onyx.sh - available (~$18/yr)
+   Social: @onyxdev - available
    Trademark: check in software category
 ```
 
